@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://ws.service.com/" xmlns:tns="http://ws.service.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="bienvenidaPais" type="tns:bienvenidaPais"/>
+
+  <xs:element name="bienvenidaPaisResponse" type="tns:bienvenidaPaisResponse"/>
+
+  <xs:element name="obtenerCapitan" type="tns:obtenerCapitan"/>
+
+  <xs:element name="obtenerCapitanResponse" type="tns:obtenerCapitanResponse"/>
+
+  <xs:element name="obtenerEntrenador" type="tns:obtenerEntrenador"/>
+
+  <xs:element name="obtenerEntrenadorResponse" type="tns:obtenerEntrenadorResponse"/>
+
+  <xs:element name="obtenerJugadores" type="tns:obtenerJugadores"/>
+
+  <xs:element name="obtenerJugadoresResponse" type="tns:obtenerJugadoresResponse"/>
+
+  <xs:complexType name="obtenerEntrenador">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="obtenerEntrenadorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="obtenerCapitan">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="obtenerCapitanResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="obtenerJugadores">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="obtenerJugadoresResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:jugador" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="jugador">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string" minOccurs="0"/>
+      <xs:element name="posicion" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="bienvenidaPais">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="bienvenidaPaisResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
